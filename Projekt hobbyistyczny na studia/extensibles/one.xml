@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="one.xsl"?>
+<root-element>
+
+<author>
+    <name>Stanisław</name>
+    <surname>Świrydczuk</surname>
+    <index>197896</index>
+    <email>s197896@student.pg.edu.pl</email>
+</author>
+
+<articles>
+    <article articleNumber="one">
+        <beginning id="art-one-beg">
+            The popularity of anime can vary over time and across different regions. As of my last knowledge update in January 2022, here are some anime series that were widely considered popular:
+        </beginning>
+        <ranking>
+            <spot>
+                <number>1. </number>
+                <title haveSeen="Yes">Attack on Titan (Shingeki no Kyojin)</title>
+            </spot>
+            <spot>
+                <number>2. </number>
+                <title haveSeen="Yes">Demon Slayer (Kimetsu no Yaiba)</title>
+            </spot>
+            <spot>
+                <number>3. </number>
+                <title haveSeen="No">My Hero Academia (Boku no Hero Academia)</title>
+            </spot>
+            <spot>
+                <number>4. </number>
+                <title haveSeen="Yes">One Punch Man</title>
+            </spot>
+            <spot>
+                <number>5. </number>
+                <title haveSeen="No">Naruto / Naruto Shippuden</title>
+            </spot>
+            <spot>
+                <number>6. </number>
+                <title haveSeen="No">Dragon Ball series (Dragon Ball, Dragon Ball Z, Dragon Ball Super)</title>
+            </spot>
+            <spot>
+                <number>7. </number>
+                <title haveSeen="No">Death Note</title>
+            </spot>
+            <spot>
+                <number>8. </number>
+                <title haveSeen="No">Fullmetal Alchemist: Brotherhood</title>
+            </spot>
+            <spot>
+                <number>9. </number>
+                <title haveSeen="No">One Piece</title>
+            </spot>
+            <spot>
+                <number>10. </number>
+                <title haveSeen="Yes">Tokyo Ghoul</title>
+            </spot>
+        </ranking>
+        <ending id="art-one-end">
+        Keep in mind that the popularity of anime can change, and new series may have gained popularity since my last update. Additionally, individual preferences play a significant role in determining what someone considers the "most popular" anime. You might want to check more recent sources for the latest trends in anime popularity. Websites like MyAnimeList, Crunchyroll, and AniList often provide updated rankings and user ratings for anime series.
+        </ending>
+    </article>
+    <article articleNumber="two">
+        <beginning id="art-two-beg">
+            Several anime studios are widely recognized and well-known in the anime industry for their contributions to the medium. As of my last knowledge update in January 2022, here are some of the most well-known anime studios:
+        </beginning>
+        <studios>
+            <studio studio-name="studio ghibli">
+                <name>Studio Ghibli: </name>
+                <description>
+                    Renowned for its enchanting and critically acclaimed films, including "Spirited Away," "My Neighbor Totoro," and "Princess Mononoke."
+                </description>
+            </studio>
+            <studio studio-name="toei animation">
+                <name>Toei Animation:</name>
+                <description>
+                    A major animation studio with a long history, known for producing popular and long-running series such as "Dragon Ball," "One Piece," and "Sailor Moon."
+                </description>
+            </studio>
+            <studio studio-name="kyoto animation">
+                <name>Kyoto Animation (KyoAni):</name>
+                <description>
+                    Recognized for its high-quality animation and emotionally resonant stories, with works like "Clannad," "K-On!," and "A Silent Voice."
+                </description>
+            </studio>
+            <studio studio-name="madhouse">
+                <name>Madhouse:</name>
+                <description>
+                    Known for its diverse range of anime genres and notable series like "Death Note," "One Punch Man" (season 1), and "Hunter x Hunter (2011)."
+                </description>
+            </studio>
+            <studio studio-name="bones">
+                <name>Bones:</name>
+                <description>
+                    Notable for its dynamic animation and involvement in series such as "Fullmetal Alchemist: Brotherhood," "My Hero Academia," and "Mob Psycho 100."
+                </description>
+            </studio>
+            <studio studio-name="a-1 pictures">
+                <name>A-1 Pictures:</name>
+                <description>
+                    Involved in a variety of anime genres, with series like "Sword Art Online," "Blue Exorcist," and "Anohana."
+                </description>
+            </studio>
+            <studio studio-name="ufotable">
+                <name>Ufotable:</name>
+                <description>
+                    Gained recognition for its exceptional animation quality, particularly in the "Fate" series ("Fate/Zero," "Fate/stay night: Unlimited Blade Works") and "Demon Slayer: Kimetsu no Yaiba."
+                </description>
+            </studio>
+            <studio studio-name="wit-studio">
+                <name>Wit Studio:</name>
+                <description>
+                    Known for its contribution to the production of "Attack on Titan."
+                </description>
+            </studio>
+            <studio studio-name="sunrise">
+                <name>Sunrise:</name>
+                <description>
+                    A long-standing studio with a history of mecha anime, responsible for the "Gundam" series, "Code Geass," and more.
+                </description>
+            </studio>
+            <studio studio-name="shaft">
+                <name>Shaft:</name>
+                <description>
+                    Noted for its unique visual style and involvement in series like the "Monogatari Series," "Puella Magi Madoka Magica," and "March Comes in Like a Lion."
+                </description>
+            </studio>
+        </studios>
+        <ending id="art-two-end">
+            These studios have played significant roles in shaping the anime industry, and their works are often celebrated by fans worldwide. It's important to note that the popularity and recognition of studios can evolve, and new studios may gain prominence over time.
+        </ending>
+    </article>
+</articles>
+
+    <images>
+        <image>
+            <filename>ghibli.svg</filename>
+            <description>The logo of Studio Ghibli</description>
+        </image>
+        <image>
+            <filename>madhouse.png</filename>
+            <description>The logo of Studio Madhouse</description>
+        </image>
+        <image>
+            <filename>mappa.png</filename>
+            <description>The logo of Studio Mappa</description>
+        </image>
+        <image>
+            <filename>ufotable.png</filename>
+            <description>The logo of Studio Ufotable</description>
+        </image>
+        <image>
+            <filename>wit.svg</filename>
+            <description>The logo of Wit Studio</description>
+        </image>
+    </images>
+
+<popularity>
+    <description>This is a list of countries with the biggest viewership of anime (from biggest to smallest)</description>
+    <countries>Japan Phillippines USA France Brazil</countries>
+</popularity>
+
+<sources>
+    <description>Articles generated by ChatGPT</description>
+    <url>https://chat.openai.com</url> 
+    <wiki>
+        <url>https://en.wikipedia.org/wiki/Main_Page</url>
+        <url>https://en.wikipedia.org/wiki/MAPPA</url>
+        <url>https://pl.wikipedia.org/wiki/Madhouse_(studio)</url>
+        <url>https://en.wikipedia.org/wiki/Studio_Ghibli</url>
+    </wiki>
+</sources>
+
+</root-element>

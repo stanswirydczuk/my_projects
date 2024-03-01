@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="NameType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SurnameType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="IndexType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="30"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TitleType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="300"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="DescriptionType">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="0"/>
+        <xs:maxLength value="300"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="CountriesList">
+      <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+
+  <xs:complexType name="AuthorType">
+    <xs:all>
+      <xs:element name="email" type="EmailType"/>
+      <xs:element name="name" type="NameType"/>
+      <xs:element name="index" type="IndexType"/>
+      <xs:element name="surname" type="SurnameType"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ArticlesType">
+    <xs:sequence>
+      <xs:element name="article" minOccurs="2" maxOccurs="2"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ArtOneType">
+    <xs:sequence>
+      <xs:element name="beginning"/>
+      <xs:element name="ranking">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="spot">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="number"/>
+                  <xs:element name="title" type="TitleType"/>
+                </xs:sequence>
+                <xs:attribute name="haveSeen" type="xs:string"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ending"/>
+    </xs:sequence>
+    <xs:attribute name="articleNumber" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="beginningType">
+    <xs:sequence>
+      <xs:element name="beginning"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="endingType">
+    <xs:sequence>
+      <xs:element name="beginning"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="ArtTwoType">
+    <xs:sequence>
+      <xs:element name="beginning" type="beginningType"/>
+      <xs:element name="studios"/>
+      <xs:element name="ending" type="endingType"/>
+    </xs:sequence>
+    <xs:attribute name="articleNumber" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="ImagesType">
+    <xs:sequence>
+      <xs:element name="image" minOccurs="3" maxOccurs="3">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="filename"/>
+            <xs:element name="description" type="DescriptionType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="popularity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="description" type="DescriptionType"/>
+        <xs:element name="countries" type="CountriesList"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="SourcesType">
+    <xs:sequence>
+      <xs:element name="description" type="DescriptionType"/>
+      <xs:element name="url"/>
+      <xs:element name="wiki">
+        <xs:complexType>
+          <xs:sequence>
+                <xs:element name="url" minOccurs="4" maxOccurs="4"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="root-element">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="author" type="AuthorType"/>
+        <xs:element name="articles" type ="ArticlesType"/>
+        <xs:element name="images" type="ImagesType"/>
+        <xs:element ref="popularity"/>
+        <xs:element name="sources" type="SourcesType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

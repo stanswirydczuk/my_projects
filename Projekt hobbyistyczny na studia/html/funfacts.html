@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts</title>
+    <link rel="stylesheet" href="../resources/style.css">
+    <link rel="stylesheet" type="text/css" href="../plugin/tango/skin.css" >
+    <link rel="stylesheet" type="text/css" href="../plugin/styl1.css" >
+    <script src="../plugin/jquery-1.8.3.min.js"></script>
+    <script src="../plugin/jquery.jcarousel.min.js"></script>    
+    <script src="../jquery-ui/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../resources/style.css">
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="../jquery-ui/jquery-ui.theme.css">
+    <script>
+        $(document).ready(function () { 
+        $("#dialog").dialog({
+            autoOpen: false, 
+            modal: true, 
+            width: 400,
+            buttons: {
+                "Ok": function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        $("#openDialogButton").on("click", function() {
+            $("#dialog").dialog("open");
+        });
+    });
+    </script>
+    <script src="../js/script.js"></script>
+</head>
+<body id="factsbody">
+    
+    <nav>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Fun facts
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#fafcff}</style><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="funfacts.html">Fun facts</a>
+                    <a href="../extensibles/one.xml">More about</a>
+                    <a href="../gallery/php/gallery.php">Gallery</a>
+                    <a href="../gallery/php/selected_images.php">Selected Images</a>
+                </div>
+                </div>
+            <a class="main" href="../index.html">MAIN PAGE</a>
+            <a href="ranking.html">Ranking</a>
+        </div>
+    </nav>
+
+    <div class="bdiv">
+        <a href="#footer" class="bottom">GO TO BOTTOM</a>
+    </div> 
+
+    <br><br>
+    <hr><hr><hr>
+    <br><br>   
+
+    <h1>Directions from your current location to Japan on foot</h1>
+    <div id="maps-container">
+        <iframe id="frame" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>  
+
+    <br>
+    <hr><hr><hr>
+    <br><br>
+
+    <div id="plugin">
+        <h1>Cosplays of famous anime characters</h1>
+        <div>
+            <img  id="rys" src="../images/cosplay-images/gif.gif" alt="">
+        </div>
+        <ul id="mycarousel" class="jcarousel-skin-tango">
+            <li><img src="../images/cosplay-images/aot.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li> 
+            <li><img src="../images/cosplay-images/gojo.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+            <li><img src="../images/cosplay-images/tg.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+            <li><img src="../images/cosplay-images/jojo.jpeg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+            <li><img src="../images/cosplay-images/itadori.jpeg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+            <li><img src="../images/cosplay-images/chainsaw.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+            <li><img src="../images/cosplay-images/oshi.jpeg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+        </ul>
+    </div>
+    <br><br>
+    <hr><hr><hr>
+    <br><br>
+    
+    <div class="tdiv">
+        <a href="#top" class="top">GO TO TOP</a>
+    </div>  
+
+    <footer>
+        <div id="footer">
+            <div id="dialog" title="Document validations">   
+                <h2>Validation of the HTML documents:</h2>
+                <img class="valload" src="../images/compressed-gallery/gif2.gif" alt="Validation chart of the HTML documents">
+                <h2>Validation of the CSS documents:</h2>
+                <img class="valload" src="../images/compressed-gallery/gif2.gif" alt="Validation chart of the CSS documents">
+            </div>
+            <button id="openDialogButton">Document validations from 12.11.23</button>
+            <button id="add">Show validation links!</button>
+            <button id="opener">Show validation links!</button>
+            <button id="closer">Remove validation links!</button>
+        </div>
+    </footer>
+</body>
+</html>

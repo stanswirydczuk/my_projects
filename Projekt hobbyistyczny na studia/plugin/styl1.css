@@ -1,0 +1,15 @@
+body {color: black;}
+#panel {  display:block;  background-color: #a2c7fb;  border-bottom-style:outset;  border-bottom-color:#4a86cf;  border-right-style:outset;
+           border-right-color:#4a86cf; border-left-style:outset; border-left-color:#4a86cf; 
+            padding:5px 10px 5px 10px;   margin-top: -8px;}
+.btn-slide {  margin-top:-5px;  margin-left: 20px;   background-color: #397fd4; color: White;   }
+.btn-slide span {   font-weight:bold; padding:0px 10px 0px 10px; text-align:center; }
+.btn-slide  :hover { background-color:#a2c7fb; color:Black;}
+.delete span {background-color: #397fd4; color: White;  font-weight:bold; padding:0px 10px 0px 10px; text-align:center; } 
+.delete :hover { background-color:#a2c7fb;  color:Black;}
+.zad { background-color: White; width:100px ;  display:inline; margin:2px 5px 2px 5px;   padding-left:4px; padding-right:4px; }
+#rys {width: 20vw; height: auto; }
+
+@media only screen and (max-width: 600px) {
+    #rys {width: 50vw; height: auto; }
+}

@@ -1,0 +1,114 @@
+﻿<!-- waliduje sie -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+    <title>Przyład testowy</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+    <link  rel="stylesheet" type="text/css" href="styl1.css" >
+    <script type="text/javascript" src="jquery-1.8.3.min.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="tango/skin.css" >
+    <script type="text/javascript" src="jquery.jcarousel.min.js"></script>
+
+    
+
+    <script type="text/javascript">
+        //http://webdesignerwall.com/tutorials/jquery-tutorials-for-designers
+
+        function mycarousel_initCallback(carousel) {
+            // Disable autoscrolling if the user clicks the prev or next button.
+            carousel.buttonNext.bind('click', function () {
+                carousel.startAuto(0);
+            });
+
+            carousel.buttonPrev.bind('click', function () {
+                carousel.startAuto(0);
+            });
+
+            // Pause autoscrolling if the user moves with the cursor over the clip.
+            carousel.clip.hover(function () {
+                carousel.stopAuto();
+            }, function () {
+                carousel.startAuto();
+            });
+        };
+
+
+
+      $(document).ready(function () {
+        //   $(function (){    //wersja skrócona
+
+            //Wysuwany element
+            $(".btn-slide").click(function () {
+                $("#panel").slideToggle("slow");
+                $(this).toggleClass("active");
+            });
+
+            //znikanie całości elementu
+            $(".delete").click(function() {
+                $(this).parent().parent().animate({ opacity: "hide" }, "slow");
+            });
+
+
+            //wylaczenie prawego przycisku myszy
+            $(document).bind('contextmenu', function (e) { return false; });
+
+            //uruchomienie karuzeli obrazków
+            jQuery('#mycarousel').jcarousel({
+                auto: 2,
+                wrap: 'last',
+                initCallback: mycarousel_initCallback
+            });
+
+
+        });
+
+
+        function laduj(obj) {
+            document.getElementById("rys").src = obj.src;
+      }
+
+  </script>
+ </head>
+ <body>
+  <div id="nagl">
+    <div id="panel">
+  
+      <div >Zadania do wykonania na dziś:
+         <div >
+           <div class="zad">wykonaj dziś 10 przysiadów</div>
+           <div class="zad">zadzwoń dziś do swojej babci</div>
+         </div>
+      </div> 
+    </div>
+   <div>
+      <a class="btn-slide"><span>przesuń panel</span></a>
+      <a class="delete" ><span>usuń panel</span></a>
+   </div>
+  </div>
+ 
+  <div id="reszta"> 
+    <p>To jest jakaś zawartość strony </p>
+  </div>
+  <div>
+    <img  id="rys" src="./zdj/12.jpg" alt="">
+  </div>
+  <div id="plugin">przykład wykorzystania pluginu jQuery http://sorgalla.com/jcarousel/
+   <ul id="mycarousel" class="jcarousel-skin-tango">
+    <li><img src="./zdj/1.jpg" width="75" height="75" alt=""  onclick="laduj(this);" ></li>
+    <li><img src="./zdj/2.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/3.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/4.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/5.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/6.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/7.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/8.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/9.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/10.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/11.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/12.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+    <li><img src="./zdj/8.jpg" width="75" height="75" alt="" onclick="laduj(this);" ></li>
+   </ul>
+  </div>
+ </body>
+</html>
